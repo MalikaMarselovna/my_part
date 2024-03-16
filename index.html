@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>EcoKarakol</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="header_body flex">
+				<div class="header_burger">
+					<span></span>
+				</div>
+				<a href="index.html" class="header_logo">
+					<p class="logo logo_color">lOGO</p>
+					<img src="img/favicon/create.png" alt="">
+				</a>
+
+				<nav class="header_menu">
+					<ul class="header_list flex">
+
+						<li>
+							<a href="#case" class="header_link">О проекте</a>
+						</li>
+						<li>
+							<a href="#about" class="header_link"></a>
+						</li>
+						<li>
+							<a href="#services" class="header_link">Сбор&bigtriangledown;</a>
+
+							<ul>
+								<li><a href="#" class="header_link">Металл</a></li>
+								<li><a href="#" class="header_link">Стекло</a></li>
+								<li><a href="#" class="header_link">Пластик</a></li>
+								<li><a href="#" class="header_link">Макулатура</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#blog" class="header_link">Чистый город</a>
+						</li>
+						<li>
+							<a href="#footer" class="header_link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="index2.html" class="btn btn_header">Личный кабинет</a>
+			</div>
+
+		</div>
+	</header>
+	
+	<section class="main">
+		<div class="container">
+			<h2 class="sec_tit">
+
+				Добро пожаловать в мир устойчивой <b> переработки и сборки материалов!</b>
+
+			</h2>
+			<div class="main_in flex">
+				<div class="main_l">
+					<p class="main_txt">Мы предлагаем комплексные решения по сборке и переработке металла, стекла, макулатуры и пластика. Наша миссия - содействовать экологической устойчивости, обеспечивая эффективное использование ресурсов и снижение воздействия на окружающую среду.
+					</p>
+					
+				</div>
+				<div class="main_r">
+					<div class="buttons_main">
+						<a href="index2.html" class="btn  btn_green">Подробнее </a>
+					<div class="play_video">
+						<button class="play-button" onclick="openModal()"></button>
+					</div>
+
+					</div>
+
+					<div class="modal" id="videoModal">
+						<div class="modal-content">
+							<span class="close" onclick="closeModal()">&times;</span>
+							<iframe width="100%" height="100%"
+								src=""
+								frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+			
+		</div>
+	</section>
+
+	<section id="about" class="about">
+		<div class="container">
+                <h3 class="sec_sub_tit">Что мы предлагаем:</h3>
+            <div class="about_cards flex ">
+                <div class="about_card ">
+                    <div class="adout_icon micon1"></div>
+                    <h5 class="card__tit">Сбор и переработка металла</h5>
+                    <p class="sub_txt">Мы занимаемся сбором и переработкой металлических отходов любого типа и объема. Наша современная техника и опытные специалисты гарантируют высокое качество обработки и минимальные потери материала.</p>
+                    <a href="#" type="button" class=" btn btn_white">Подробнее</a>
+                </div>
+				<div class="about_card ">
+                    <div class="adout_icon micon2"></div>
+                    <h5 class="card__tit">Переработка стекла</h5>
+                    <p class="sub_txt">Мы осуществляем переработку стеклянных отходов с целью повторного использования и сокращения негативного воздействия на окружающую среду. Мы предлагаем широкий спектр услуг по сортировке, очистке и переработке стекловидных материалов.</p>
+                    <a href="#" type="button" class="btn btn_white">Подробнее</a>
+                </div>
+				<div class="about_card ">
+                    <div class="adout_icon micon3"></div>
+                    <h5 class="card__tit">Утилизация макулатуры</h5>
+                    <p class="sub_txt">Наша компания заботится о сохранении лесов и борьбе с вырубкой деревьев. Мы предлагаем услуги по сбору, сортировке и переработке макулатуры, что позволяет уменьшить давление на лесные ресурсы и снизить выбросы парниковых газов.</p>
+                    <a href="#" type="button" class="btn btn_white">Подробнее</a>
+                </div>
+				<div class="about_card ">
+                    <div class="adout_icon micon4"></div>
+                    <h5 class="card__tit">Пластиковая переработка</h5>
+                    <p class="sub_txt">Мы специализируемся на переработке пластиковых отходов, предлагая комплексные решения для их сбора, сортировки и переработки. Наш подход позволяет снизить загрязнение окружающей среды и повысить эффективность использования пластиковых материалов.</p>
+                    <a href="#" type="button" class="btn btn_white">Подробнее</a>
+                </div>
+            </div>
+		</div>
+
+	</section>
+	<section class="what">
+		<div class="container">
+			<h3 class="sec_sub_tit tit_green">О переработке:</h3>
+			<div class="tabs">
+				<div class=" tabs__nav tabs-nav  flex">
+					<div class="tabs-nav__item btn " data-tab-name="tab1">Металл
+					</div>
+					<div class="tabs-nav__item btn  " data-tab-name="tab2">Стекло</div>
+					<div class="tabs-nav__item btn " data-tab-name="tab3">Макулатура</div>
+					<div class="tabs-nav__item btn " data-tab-name="tab4">Пластик</div>
+				</div>
+				<div class="tabs__content is-active tab1">
+					<div class="tab_content-in flex">
+						<div class="content_left">
+							<h3 class="content_tit">
+								Металлы
+							</h3>
+							<ul>							
+								<li class="tab_info"><b class="tit_green">Энергосбережение: </b>Переработка металла может сэкономить до 95% энергии по сравнению с производством металла из первичных источников. Например, производство алюминия из руды требует значительного количества энергии, тогда как переработка алюминиевых отходов для получения нового металла гораздо менее энергоемко.</li>
+								<li class="tab_info">
+									<b class="tit_green">Многократное использование:</b> Металлы можно перерабатывать множество раз без потери их свойств. Это позволяет сокращать не только энергозатраты, но и избежать добычи новых руд и загрязнения окружающей среды.</li>
+								<li class="tab_info"><b class="tit_green">Уменьшение выбросов: </b>Переработка металла помогает сократить выбросы парниковых газов и других вредных веществ. Например, при переплавке стали с использованием металлолома снижается объем выбросов углекислого газа.
+								</li>
+								<li class="tab_info">	
+									<b class="tit_green">Экономический эффект: </b> Переработка металла создает рабочие места и способствует развитию экономики. Во многих странах переработка металла стала одной из крупнейших отраслей промышленности.</li>
+								<li class="tab_info">	<b class="tit_green">Инновации в технологиях:</b> Развитие методов и технологий переработки металла способствует созданию более эффективных и экологически чистых процессов. Например, появление методов электролиза и улучшение технологий вторичной переплавки существенно улучшили эффективность и энергосбережение в этой отрасли.</li>
+							</ul>
+
+						
+						</div>
+						<div class="content_right">
+							<div class="tab_img">
+								<img src="img/shutterstock.jpg" alt="">
+							</div>
+							<div class="tab_info2">Переработка металла играет важную роль в создании более устойчивой и экологически безопасной промышленности, способствуя сохранению природных ресурсов и улучшению качества окружающей среды.</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<div class="tabs__content tab2">
+					<div class="tab_content-in flex">
+						<div class="content_left">
+							<h3 class="content_tit">
+								Стекло
+							</h3>
+							<ul>							
+								<li class="tab_info"><b class="tit_green">Энергосбережение: </b>Переработка металла может сэкономить до 95% энергии по сравнению с производством металла из первичных источников. Например, производство алюминия из руды требует значительного количества энергии, тогда как переработка алюминиевых отходов для получения нового металла гораздо менее энергоемко.</li>
+								<li class="tab_info">
+									<b class="tit_green">Многократное использование:</b> Металлы можно перерабатывать множество раз без потери их свойств. Это позволяет сокращать не только энергозатраты, но и избежать добычи новых руд и загрязнения окружающей среды.</li>
+								<li class="tab_info"><b class="tit_green">Уменьшение выбросов: </b>Переработка металла помогает сократить выбросы парниковых газов и других вредных веществ. Например, при переплавке стали с использованием металлолома снижается объем выбросов углекислого газа.
+								</li>
+								<li class="tab_info">	
+									<b class="tit_green">Экономический эффект: </b> Переработка металла создает рабочие места и способствует развитию экономики. Во многих странах переработка металла стала одной из крупнейших отраслей промышленности.</li>
+								<li class="tab_info">	<b class="tit_green">Инновации в технологиях:</b> Развитие методов и технологий переработки металла способствует созданию более эффективных и экологически чистых процессов. Например, появление методов электролиза и улучшение технологий вторичной переплавки существенно улучшили эффективность и энергосбережение в этой отрасли.</li>
+							</ul>
+
+						
+						</div>
+						<div class="content_right">
+							<div class="tab_img">
+								<img src="img/si.jpg" alt="">
+							</div>
+							<div class="tab_info2">Переработка металла играет важную роль в создании более устойчивой и экологически безопасной промышленности, способствуя сохранению природных ресурсов и улучшению качества окружающей среды.</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<div class="tabs__content tab3">
+					<div class="tab_content-in flex">
+						<div class="content_left">
+							<h3 class="content_tit">
+								Макулатура
+							</h3>
+							<ul>							
+								<li class="tab_info"><b class="tit_green">Энергосбережение: </b>Переработка металла может сэкономить до 95% энергии по сравнению с производством металла из первичных источников. Например, производство алюминия из руды требует значительного количества энергии, тогда как переработка алюминиевых отходов для получения нового металла гораздо менее энергоемко.</li>
+								<li class="tab_info">
+									<b class="tit_green">Многократное использование:</b> Металлы можно перерабатывать множество раз без потери их свойств. Это позволяет сокращать не только энергозатраты, но и избежать добычи новых руд и загрязнения окружающей среды.</li>
+								<li class="tab_info"><b class="tit_green">Уменьшение выбросов: </b>Переработка металла помогает сократить выбросы парниковых газов и других вредных веществ. Например, при переплавке стали с использованием металлолома снижается объем выбросов углекислого газа.
+								</li>
+								<li class="tab_info">	
+									<b class="tit_green">Экономический эффект: </b> Переработка металла создает рабочие места и способствует развитию экономики. Во многих странах переработка металла стала одной из крупнейших отраслей промышленности.</li>
+								<li class="tab_info">	<b class="tit_green">Инновации в технологиях:</b> Развитие методов и технологий переработки металла способствует созданию более эффективных и экологически чистых процессов. Например, появление методов электролиза и улучшение технологий вторичной переплавки существенно улучшили эффективность и энергосбережение в этой отрасли.</li>
+							</ul>
+
+						
+						</div>
+						<div class="content_right">
+							<div class="tab_img">
+								<img src="img/makulatura.jpg" alt="">
+							</div>
+							<div class="tab_info2">Переработка металла играет важную роль в создании более устойчивой и экологически безопасной промышленности, способствуя сохранению природных ресурсов и улучшению качества окружающей среды.</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<div class="tabs__content tab4">
+					<div class="tab_content-in flex">
+						<div class="content_left">
+							<h3 class="content_tit">
+								Пластик
+							</h3>
+							<ul>							
+								<li class="tab_info"><b class="tit_green">Энергосбережение: </b>Переработка металла может сэкономить до 95% энергии по сравнению с производством металла из первичных источников. Например, производство алюминия из руды требует значительного количества энергии, тогда как переработка алюминиевых отходов для получения нового металла гораздо менее энергоемко.</li>
+								<li class="tab_info">
+									<b class="tit_green">Многократное использование:</b> Металлы можно перерабатывать множество раз без потери их свойств. Это позволяет сокращать не только энергозатраты, но и избежать добычи новых руд и загрязнения окружающей среды.</li>
+								<li class="tab_info"><b class="tit_green">Уменьшение выбросов: </b>Переработка металла помогает сократить выбросы парниковых газов и других вредных веществ. Например, при переплавке стали с использованием металлолома снижается объем выбросов углекислого газа.
+								</li>
+								<li class="tab_info">	
+									<b class="tit_green">Экономический эффект: </b> Переработка металла создает рабочие места и способствует развитию экономики. Во многих странах переработка металла стала одной из крупнейших отраслей промышленности.</li>
+								<li class="tab_info">	<b class="tit_green">Инновации в технологиях:</b> Развитие методов и технологий переработки металла способствует созданию более эффективных и экологически чистых процессов. Например, появление методов электролиза и улучшение технологий вторичной переплавки существенно улучшили эффективность и энергосбережение в этой отрасли.</li>
+							</ul>
+
+						
+						</div>
+						<div class="content_right">
+							<div class="tab_img">
+								<img src="img/plastic.webp" alt="">
+							</div>
+							<div class="tab_info2">Переработка металла играет важную роль в создании более устойчивой и экологически безопасной промышленности, способствуя сохранению природных ресурсов и улучшению качества окружающей среды.</div>
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="js/core.js"></script>
+
+</body>
+
+</html>
