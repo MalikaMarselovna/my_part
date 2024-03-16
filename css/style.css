@@ -579,7 +579,6 @@ b {
 	overflow: hidden;
 	/* Скрываем всё за контуром */
 }
-
 .tab_img img {
 	width: 650px;
 	transition: 1s;
