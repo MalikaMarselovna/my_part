@@ -77,7 +77,8 @@ body {
 	font-family: "Sofia Sans Semi Condensed";
 	line-height: 19px;
 	width: 100%;
-	background-color: #106b41;
+	background-color:rgba(0, 184, 113, 1);
+	;
 	/* Зеленый цвет фона */
 
 	/* Чтобы убрать скролл при прокрутке */
@@ -119,7 +120,7 @@ section {
 	text-align: center;
 	font-size: 60px;
 	line-height: 57px;
-	color: #106b41;
+	color:rgba(0, 184, 113, 1);
 	text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 5vh var(--lights);
 	max-width: 80%;
 	margin: 0 auto;
@@ -156,7 +157,7 @@ section {
 
 .btn {
 	background: none;
-	border: 4px double rgb(127, 202, 158);
+	border: 1px solid rgb(127, 202, 158);
 	border-radius: 10px;
 	font-weight: 400;
 	font-size: 15px;
@@ -195,6 +196,144 @@ section {
 
 
 /* MALIKA */
+
+/* .preloader */
+
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),90%,90%);
+	--fg: hsl(var(--hue),90%,10%);
+	--trans-dur: 0.3s;
+	font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+}
+.preloader {
+	
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+.smiley {
+	width: 15em;
+	height: 15em;
+}
+.smiley__eye1,
+.smiley__eye2,
+.smiley__mouth1,
+.smiley__mouth2 {
+	animation: eye1 3s ease-in-out infinite;
+}
+.smiley__eye1,
+.smiley__eye2 {
+	transform-origin: 64px 64px;
+}
+.smiley__eye2 {
+	animation-name: eye2;
+}
+.smiley__mouth1 {
+	animation-name: mouth1;
+}
+.smiley__mouth2 {
+	animation-name: mouth2;
+	visibility: hidden;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),90%,10%);
+		--fg: hsl(var(--hue),90%,90%);
+	}
+}
+
+/* Animations */
+@keyframes eye1 {
+	from {
+		transform: rotate(-260deg) translate(0,-56px);
+	}
+	50%,
+	60% {
+		animation-timing-function: cubic-bezier(0.17,0,0.58,1);
+		transform: rotate(-40deg) translate(0,-56px) scale(1);
+	}
+	to {
+		transform: rotate(225deg) translate(0,-56px) scale(0.35);
+	}
+}
+@keyframes eye2 {
+	from {
+		transform: rotate(-260deg) translate(0,-56px);
+	}
+	50% {
+		transform: rotate(40deg) translate(0,-56px) rotate(-40deg) scale(1);
+	}
+	52.5% {
+		transform: rotate(40deg) translate(0,-56px) rotate(-40deg) scale(1,0);
+	}
+	55%,
+	70% {
+		animation-timing-function: cubic-bezier(0,0,0.28,1);
+		transform: rotate(40deg) translate(0,-56px) rotate(-40deg) scale(1);
+	}
+	to {
+		transform: rotate(150deg) translate(0,-56px) scale(0.4);
+	}
+}
+@keyframes eyeBlink {
+	from,
+	25%,
+	75%,
+	to {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(0);
+	}
+}
+@keyframes mouth1 {
+	from {
+		animation-timing-function: ease-in;
+		stroke-dasharray: 0 351.86;
+		stroke-dashoffset: 0;
+	}
+	25% {
+		animation-timing-function: ease-out;
+		stroke-dasharray: 175.93 351.86;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		animation-timing-function: steps(1,start);
+		stroke-dasharray: 175.93 351.86;
+		stroke-dashoffset: -175.93;
+		visibility: visible;
+	}
+	75%,
+	to {
+		visibility: hidden;
+	}
+}
+@keyframes mouth2 {
+	from {
+		animation-timing-function: steps(1,end);
+		visibility: hidden;
+	}
+	50% {
+		animation-timing-function: ease-in-out;
+		visibility: visible;
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: -351.86;
+	}
+}
+/* section,
+header,
+footer{
+	display: none;
+} */
 /* header */
 /* .header_logo {
 
@@ -207,13 +346,10 @@ section {
 
 .header {
 	position: fixed;
-	margin: auto;
 	top: 0;
-	bottom: 0;
 	left: 0;
-	right: 0;
 	width: 100%;
-	z-index: 1000;
+	z-index: 50;
 }
 
 .header::before {
@@ -224,12 +360,13 @@ section {
 	width: 100%;
 	height: 100%;
 	background: radial-gradient(83.15% 154.4% at 10% 13.52%, #1E212C 0%, #232441 56.38%, #1E212C 100%);
-	z-index: 10;
+	z-index: 3;
 }
 
 .header_body {
 	position: relative;
 	height: 80px;
+
 
 }
 
@@ -239,6 +376,9 @@ section {
 
 .header_list {
 	gap: 30px;
+	position: relative;
+	z-index: 2px;
+
 
 }
 
@@ -303,7 +443,7 @@ nav ul li:hover>ul {
 
 .btn_green {
 	color: (159, 174, 165);
-	background: #106b41;
+	background: rgba(0, 184, 113, 1);	;
 	border: rgb(159, 174, 165) 4px double;
 	margin: 50px auto;
 
@@ -319,7 +459,7 @@ nav ul li:hover>ul {
 }
 
 .buttons_main {
-	margin-left: -200px;
+	/* margin-left: -200px; */
 	display: inline-flex;
 	gap: 20px;
 }
@@ -343,7 +483,7 @@ b {
 	border: none;
 	border: 4px double rgb(207, 213, 209);
 	border-radius: 100%;
-	background-color: #106b41;
+	background-color: rgba(0, 184, 113, 1);
 	color: #fff;
 	cursor: pointer;
 	overflow: hidden;
@@ -413,7 +553,28 @@ b {
 	text-decoration: none;
 	cursor: pointer;
 }
+/* go back icon */
+.back-to-top {
+	background-image: url(../img/icons/up.svg);
+	background-position: center;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 15%;
+	font-size: 20px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 9999;
+	transition: 1s;
+	display: block;
+}
 
+.back-to-top:hover {
+	transform: scale(1.1);
+}
 /* about */
 .sec_sub_tit {
 	font-weight: 500;
@@ -595,4 +756,77 @@ b {
 .tab_img:hover {
 
 	filter: brightness(100%)
+}
+
+/* partners */
+
+.slider-wrapper .image-list{
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	gap: 15px;
+	font-size: 0;
+	overflow-x: auto;
+	scrollbar-width: none;
+	margin-bottom: 30px;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar{
+	display: none;
+}
+.slider-wrapper .image-list .image-item{
+	width: 325px;
+	height: 400px;
+	object-fit: cover;
+}
+.slider-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background:none;
+}
+.container .slider-scrollbar{
+
+	height: 24px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+}
+.slider-scrollbar .scrollbar-track{
+	position: relative;
+	border-radius: 4px;
+	height: 2px;
+	width: 100%;
+	background:#fff;
+	transition: 1s;
+}
+.slider-scrollbar:hover .scrollbar-track{
+	height: 4px;
+
+}
+.slider-scrollbar .scrollbar-thumb{
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	background:#000;
+	background: inherit;
+	cursor: grab;
+
+}
+.slider-scrollbar .scrollbar-thumb:active{
+	cursor: grabbing;
+	height: 8px;
+	top: -2px;
+
+
+}
+
+.slider-scrollbar .scrollbar-thumb::after{
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+top: -10px;
+bottom: -10px;
 }

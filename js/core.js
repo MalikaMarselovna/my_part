@@ -91,4 +91,28 @@ let tab = function(){
 
 
 tab();
+// const order = document.querySelector('.order-course');
+// const about = document.querySelector('.about');
+// const start = document.querySelector('.start');
+// const advantages = document.querySelector('.advantages');
+// const partners = document.querySelector('.partners');
+// const program = document.querySelector('.program');
+// const mentors = document.querySelector('.mentors');
+// const form = document.querySelector('.form');
 
+// // preloader
+// setTimeout(function (){
+//     const loader = document.querySelector('.preloader')
+//     loader.remove();
+//     section.style.display = 'flex';
+//     header.style.display = 'flex';
+//     footer.style.display = ' ';
+//     order.style.display = 'flex';
+//     about.style.display = 'flex';
+//     start.style.display = 'flex';
+//     advantages.style.display = 'flex';
+//     partners.style.display = 'flex';
+//     program.style.display = 'flex';
+//     mentors.style.display = 'flex';
+//     form.style.display = 'flex';
+// }, 2000)
